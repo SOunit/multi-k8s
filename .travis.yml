@@ -18,7 +18,7 @@ before_install:
   - docker build -t hiranokuosaka/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CL=true hiranokuosaka/react-test npm test
+  - docker run -e CI=true hiranokuosaka/react-test npm test
 
 deploy:
   provider: script
